@@ -24,7 +24,14 @@ export const orderResponses = [
 	"Siparişiniz hakkında güncel bilgi almak için linke tıklayınız. \n https://www.yasarkantarcilar.com/ara?q=siparişlerim",
 ];
 
-export const returnConditions = ["iptal", "iptal etmek", "iptal etmek istiyorum", "iptali"];
+export const returnConditions = [
+	"iptal",
+	"iptal etmek",
+	"iptal etmek istiyorum",
+	"iptali",
+	"iade",
+	"iade etmek",
+];
 export const returnResponses = [
 	"İptal etmek istediğiniz siparişinizin numarasını yazabilir misiniz ?, Örnek: Ürün iptal numarası: 123456789",
 ];

@@ -36,6 +36,17 @@ export const returnResponses = [
 	"İptal etmek istediğiniz siparişinizin numarasını yazabilir misiniz ?, Örnek: Ürün iptal numarası: 123456789",
 ];
 
+export const exchangeConditions = [
+	"değiştirmek",
+	"değiştirmek istiyorum",
+	"değiştirmek istiyorum",
+	"değişim",
+	"değişim yapmak",
+];
+export const exchangeResponses = [
+	"Ürün değişimi için lütfen aşağıdaki linke tıklayınız. \n https://www.yasarkantarcilar.com/ara?q=değişim",
+];
+
 export const productConditions = ["ürün", "urun", "ürünüm", "urunum", "ürünlerim", "urunlerim"];
 export const productResponses = [
 	"Ürünleriniz için lütfen aşağıdaki linke tıklayınız. \n https://www.yasarkantarcilar.com/ara?q=ürün",

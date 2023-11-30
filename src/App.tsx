@@ -13,6 +13,8 @@ import {
 	returnResponses,
 	orderConditions,
 	orderResponses,
+	exchangeConditions,
+	exchangeResponses,
 } from "./botData";
 
 function App() {
@@ -36,6 +38,7 @@ function App() {
 			{ condition: orderConditions, response: orderResponses },
 			{ condition: returnConditions, response: returnResponses },
 			{ condition: productConditions, response: productResponses },
+			{ condition: exchangeConditions, response: exchangeResponses },
 		].forEach((eachCondition) => {
 			if (eachCondition.condition.some((condition) => message.toLowerCase().includes(condition))) {
 				setchat((prev) => [

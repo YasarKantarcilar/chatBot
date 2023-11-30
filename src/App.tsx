@@ -98,7 +98,7 @@ function App() {
 			<div className="w-[100%] md:w-[80%] md:ml-[20%] min-h-screen relative">
 				<div className="min-h-[90vh] w-full flex flex-col gap-2 pt-2 overflow-scroll pb-[20%] md:pb-[10%]">
 					{chat?.map((message, index) => {
-						return <Message key={index} from={message.from} message={message.message} />;
+						return <Message key={index} index={index} from={message.from} message={message.message} />;
 					})}
 					<div ref={chatRef} />
 				</div>

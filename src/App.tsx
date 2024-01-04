@@ -31,15 +31,20 @@ function App() {
 			},
 		]);
 	};
+
+	const [chatConditions, setchatConditions] = useState([
+		{ condition: greetingConditions, response: greetingResponses },
+		{ condition: helpConditions, response: helpResponses },
+		{ condition: orderConditions, response: orderResponses },
+		{ condition: returnConditions, response: returnResponses },
+		{ condition: productConditions, response: productResponses },
+		{ condition: exchangeConditions, response: exchangeResponses },
+	]);
+
+	console.log(chatConditions);
+
 	const botCondition = () => {
-		[
-			{ condition: greetingConditions, response: greetingResponses },
-			{ condition: helpConditions, response: helpResponses },
-			{ condition: orderConditions, response: orderResponses },
-			{ condition: returnConditions, response: returnResponses },
-			{ condition: productConditions, response: productResponses },
-			{ condition: exchangeConditions, response: exchangeResponses },
-		].forEach((eachCondition) => {
+		chatConditions.forEach((eachCondition) => {
 			if (eachCondition.condition.some((condition) => message.toLowerCase().includes(condition))) {
 				setchat((prev) => [
 					...prev,
@@ -96,7 +101,7 @@ function App() {
 	return (
 		<div className="min-h-screen bg-[#f0f1f2]">
 			<div className="w-0 md:w-[20%] h-screen overflow-y-scroll overflow-x-hidden fixed flex flex-col items-center justify-start bg-white left-0 top-0">
-				<MessagesListItem />
+				<MessagesListItem value={chatConditions} setValue={setchatConditions} />
 			</div>
 			<div className="w-[100%] md:w-[80%] md:ml-[20%] min-h-screen relative">
 				<div className="min-h-[90vh] w-full flex flex-col gap-2 pt-2 overflow-scroll pb-[20%] md:pb-[10%]">
